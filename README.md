@@ -18,3 +18,11 @@ A full-stack web application that delivers personalized recipe suggestions using
 
 ### ⚡ Parallel Computing with Dask
 - Dask distributes recommendation computations across multiple cores, significantly improving performance.
+
+
+## 🎨 Technologies Used
+
+- **Angular** – Frontend framework for building dynamic and responsive user interfaces
+- **Flask** – Lightweight Python backend for handling API requests and recommendation logic
+- **MongoDB** – NoSQL database for storing flexible recipe metadata and user interactions
+- **MySQL** – Relational database for structured user and recipe data
