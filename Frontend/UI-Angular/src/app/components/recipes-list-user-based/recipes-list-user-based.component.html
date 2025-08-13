@@ -1,0 +1,8 @@
+<div class="recipes-container" >
+    <div class="recipe-scroll">
+      <div *ngFor="let recipe of recipesList; let i = index" class="recipe-card"  >
+        <app-recipe [recipe]="recipe"></app-recipe>
+      </div>
+    </div>
+  </div>
+

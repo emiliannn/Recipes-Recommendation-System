@@ -1,0 +1,18 @@
+<h1 mat-dialog-title class="recipe-title">{{ recipe.name }}</h1>
+<div mat-dialog-content class="recipe-content">
+  <p class="recipe-submitted"><strong>Submitted:</strong> {{ recipe.submitted }}</p>
+  <p class="recipe-time"><strong>Cooking Time:</strong> {{ recipe.minutes }} minutes</p>
+  <p class="recipe-description"><strong>Description:</strong> {{ recipe.description }}</p>
+  <p class="recipe-ingredients-title"><strong>Ingredients:</strong></p>
+  <mat-list class="recipe-ingredients">
+    <mat-list-item *ngFor="let ingredient of recipe.ingredients">{{ ingredient }}</mat-list-item>
+  </mat-list>
+  <p class="recipe-steps-title"><strong>Steps:</strong></p>
+  <mat-list class="recipe-steps">
+    <mat-list-item *ngFor="let step of recipe.steps">{{ step }}</mat-list-item>
+  </mat-list>
+</div>
+<div mat-dialog-actions class="recipe-actions">
+  <button mat-button (click)="close()">Close</button>
+</div>
+

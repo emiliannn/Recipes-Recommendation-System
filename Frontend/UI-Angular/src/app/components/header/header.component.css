@@ -1,0 +1,71 @@
+
+mat-toolbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000; 
+  }
+  
+  mat-toolbar button {
+      margin-left: 8px;
+    }
+    
+    .mat-toolbar .spacer {
+      flex: 1 1 auto;
+    }
+
+    mat-toolbar button[disabled] {
+      background-color: #808080;
+      cursor: not-allowed;
+    }
+    
+    mat-toolbar button:not(:first-child)[ngIf="settingsOpen"] {
+      display: none;
+    }
+    
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center; 
+    }
+    
+    
+    drag-scroll {
+      display: flex;
+      overflow-x: auto;
+    }
+  
+    .recipes-text {
+      margin-top: 1.5em;
+      margin-bottom: 0.5em;
+      font-size: 3em;
+      color: #333;
+      text-align: center;
+    }
+    
+    .container {
+      margin: 0 20px; 
+    }
+    
+    .player-scroll-container {
+      overflow-x: auto;
+      scrollbar-width: thin; 
+      scrollbar-color: transparent transparent;
+      -ms-overflow-style: none; 
+    }
+    .player-scroll-container::-webkit-scrollbar {
+      width: 0;
+    }
+    
+    .player-scroll {
+      display: flex;
+      gap: 10px; 
+    }
+    
+    .app-player {
+      flex: 0 0 auto;
+    }
+
+    .back-button{
+      margin-right: 15px;
+    }

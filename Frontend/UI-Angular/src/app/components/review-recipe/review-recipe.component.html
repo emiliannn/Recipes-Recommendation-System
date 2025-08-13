@@ -1,0 +1,16 @@
+<h1 mat-dialog-title class="recipe-title">{{ recipe.name }}</h1>
+<div mat-dialog-content class="recipe-content">
+  <p class="recipe-submitted"><strong>Submitted: </strong> {{ recipe.submitted }}</p>
+  <p class="recipe-time"><strong>Cooking Time: </strong> {{ recipe.minutes }} minutes</p>
+  <p class="recipe-description"><strong>Description: </strong> {{ recipe.description }}</p>
+  <p class="recipe-ingredients-title"><strong>Number of Ingredients: </strong>{{recipe.n_ingredients}}</p>
+  <p class="recipe-description"><strong>Review this recipe: </strong> </p>
+  <div class="mb-3"><star-rating [starType]="'svg'" [rating]="0" (ratingChange)="onRatingChange($event)"></star-rating></div>
+    <mat-form-field class="example-full-width" >
+      <mat-label>Leave a comment</mat-label>
+      <textarea matInput placeholder="How was the recipe?" [(ngModel)] = "reciepeComment"></textarea>
+    </mat-form-field>
+</div>
+<div mat-dialog-actions class="recipe-actions">
+  <button mat-button (click)="submitReview()">Submit Review</button>
+</div>

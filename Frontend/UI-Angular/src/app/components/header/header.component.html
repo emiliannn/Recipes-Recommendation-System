@@ -1,0 +1,17 @@
+<mat-toolbar color="primary">
+    <mat-icon *ngIf="showBackButton" (click)="navigateBack()" class="back-button">arrow_back</mat-icon>
+    <mat-icon class="icon">restaurant</mat-icon>
+    <div>Recipes app</div>
+    <span class="spacer"></span>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+
+    <button mat-icon-button [matMenuTriggerFor]="modeMenu">
+      <mat-icon>settings</mat-icon>
+    </button>
+    <mat-menu #modeMenu="matMenu">
+      <button mat-menu-item>Add recipe</button>
+      <button mat-menu-item >Settings</button>
+      <button mat-menu-item>Log Out</button>
+
+    </mat-menu>
+  </mat-toolbar>

@@ -1,0 +1,48 @@
+
+<mat-card class="example-card" appearance="outlined" [class.frozen]="isFrozen" (click)="provideContentBasedRecommendations(recipe)">
+      <div class="pt-2 pr-2">
+
+        <button mat-icon-button [matMenuTriggerFor]="optionsMenu" (click)="childClick($event)" class="more-button" aria-label="Example icon button with a menu icon">
+          <mat-icon>more_horiz</mat-icon>
+        </button>
+        <mat-menu #optionsMenu="matMenu">
+          <button mat-menu-item (click)="openRecipeDetailsPopup()">More details</button>
+          <button mat-menu-item (click)="add_disliked_recipe()">I don't like it</button>
+          <button mat-menu-item (click)="openReviewRecipePopup()">Review recipe</button>
+        </mat-menu>
+      </div>
+      <img src="../assets/food-pyramid-nutrition.png" alt="Food Pyramid">
+      <!-- Image by freepik -->
+
+      <mat-card-header>
+        <div class="w-100">
+          <div class="w-100">
+            <span class="badge badge-pill">
+              {{recipe.minutes}}'
+            </span>
+          </div>
+          <div class="flex-container">
+            <mat-card-title>{{recipe.name}}</mat-card-title>
+            <app-like-button [recipe]="recipe" (click)="childClick($event)"></app-like-button>
+          </div>
+        </div>
+      </mat-card-header>
+      
+      
+    <mat-card-content>
+      <div class="description">
+        {{recipe.description}}
+      </div>
+    </mat-card-content>
+    <mat-card-footer class="example-card-footer">
+        <mat-chip-set aria-label="Chihuahua traits">
+          <mat-chip>{{recipe.tags[0]}}</mat-chip>
+          <mat-chip>{{recipe.tags[1]}}</mat-chip>
+          <mat-chip>{{recipe.tags[2]}}</mat-chip>
+          <mat-chip>{{recipe.tags[3]}}</mat-chip>
+          <mat-chip>...</mat-chip>
+        </mat-chip-set>
+      </mat-card-footer>
+    
+  </mat-card>
+  
